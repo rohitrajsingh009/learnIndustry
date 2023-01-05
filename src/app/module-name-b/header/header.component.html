@@ -1,0 +1,102 @@
+
+<div class="ma">
+    <marquee behavior="scroll" direction="left" style="color: red;" scrollamount="12">Study for success ! register here
+        to complete your career in It-fields.</marquee>
+</div>
+<!-- Header -->
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" style=" margin-bottom: -20px!important;">
+            <a class="navbar-brand"  (click)="service.navigateTo('')"><img src="assets/images/logo.png" alt="logo"
+                    class="img-fluid" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="bs4navbar">
+                <hr>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item " [ngClass]="selected == 'routeNameB' ? 'active' : ''" (click)="goTo('')">
+                        <a class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [ngClass]="selected == 'about-us' ? 'active' : ''"
+                            (click)="goTo('about-us')">About Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" [ngClass]="selected == 'entry-types' ? 'active' : ''"
+                            (click)="goTo('entry-types')">Entry</a>
+                    </li> -->
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown" *ngIf="show">
+                        <!-- <a class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a> -->
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" routerLink="services">Services Processing</a>
+                          <a class="dropdown-item" routerLink="/category2/responsive-web">Responsive Web Development</a>
+                          <a class="dropdown-item" routerLink="/category2/cyber-awareness">Cyber Security Awareness Program</a>
+                             <!--    <a class="dropdown-item" routerLink="/services/training">IT-Training & Plecement</a>
+                              <a class="dropdown-item" routerLink="/services/problem-solution">IT-Problem Solutions</a>
+                              <a class="dropdown-item"routerLink="/services/exam">Online & Offline Exam</a>
+                              <a class="dropdown-item" routerLink="/services/cross-pateform">Cross-Platform Apps Development</a>
+              <a class="dropdown-item" routerLink="/services/training">Responsive Design for Web & App</a>
+              <a class="dropdown-item" routerLink="/services/training">Professional VideoGraphy</a>
+              <a class="dropdown-item" routerLink="/services/training">Logo Design</a>
+              <a class="dropdown-item" routerLink="/services/training">Digital Painting</a>
+              <a class="dropdown-item" routerLink="/services/training">Career & Finance Services</a>
+                          -->
+                        </div>
+                    </li>
+
+
+
+                    <li class="nav-item" [ngClass]="selected == 'sign-in' ? 'active' : ''" (click)="goTo('sign-in')">
+                        <a class="nav-link">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [ngClass]="selected == 'contact-us' ? 'active' : ''"
+                            (click)="goTo('contact-us')">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- End Header -->
+
+
+    <!---header stripe Start -->
+    <div id="header">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <ul>
+                            <li><a href=tel:9170190050>
+                                <i class="fa fa-volume-control-phone" aria-hidden="true" ></i> +91 9170190050 </a></li>
+                            <li>|</li>
+                            <li><a href=mailto:er.rohitsingh09@gmail.com><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    er.rohitsingh09@gmail.com</a></li>
+                            <li>|</li>
+                            <li><a href="https://wa.me/+91 9170190050"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                WhatsApp</a></li>
+                        <li>|</li>
+                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 24/7 Hours Working</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="social-icon">
+                            <li class="followus-label">Follow Us:</li>
+                            <li><a href="https://www.facebook.com/Rohit42310031/" target="_blank"><i
+                                        class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/RohitSi49998679" target="_blank"><i class="fa fa-twitter"
+                                        aria-hidden="true"></i></a></li>
+
+                            <li><a href="https://www.linkedin.com/in/rohit-singh-a51252152/" target="_blank">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

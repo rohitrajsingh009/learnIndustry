@@ -1,0 +1,9 @@
+.mm-slideout {
+    -webkit-transition: -webkit-transform .4s ease;
+    -ms-transition: -ms-transform .4s ease;
+    transition: transform .4s ease;
+}
+.mm-page {
+    box-sizing: border-box;
+    position: relative;
+}

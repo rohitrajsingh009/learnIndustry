@@ -1,0 +1,141 @@
+<div class="ma">
+  <marquee behavior="scroll" direction="left" style="color: red;" scrollamount="12">Study for success ! register here
+      to complete your career in It-fields.</marquee>
+</div>
+<!-- Header -->
+<header>
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light" style=" margin-bottom: -20px!important;">
+          <a class="navbar-brand"  (click)="service.navigateTo('')"><img src="assets/images/logo.png" alt="logo"
+                  class="img-fluid" /></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="bs4navbar">
+              <hr>
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item " [ngClass]="selected == 'routeNameA/routingNameA/profile' ? 'active' : ''" (click)="goTo('routingNameA/profile')">
+                      <a class="nav-link">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" [ngClass]="selected == 'routingNameA/sprint-plan' ? 'active' : ''"
+                          (click)="goTo('routingNameA/sprint-plan')">Schedule</a>
+                  </li>
+                  <li class="nav-item" [ngClass]="selected == 'routingNameA/change-password' ? 'active' : ''" (click)="goTo('routingNameA/change-password')">
+                      <a class="nav-link">change password</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" 
+                      (click)="logoutModalOpen()">Log Out</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </div>
+
+  <!-- End Header -->
+
+
+  <!---header stripe Start -->
+  <div id="header">
+      <div class="topbar">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-8">
+                      <ul>
+                          <li><a href=tel:9170190050>
+                              <i class="fa fa-volume-control-phone" aria-hidden="true" ></i> +91 9170190050 </a></li>
+                          <li>|</li>
+                          <li><a href=mailto:er.rohitsingh09@gmail.com><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                  er.rohitsingh09@gmail.com</a></li>
+                          <li>|</li>
+                          <li><a href="https://wa.me/+91 9170190050"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                              WhatsApp</a></li>
+                      <li>|</li>
+                          <li><i class="fa fa-clock-o" aria-hidden="true"></i> 24/7 Hours Working</li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="header">
+    <div class="topbar" style="background: darkseagreen;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                  <ul class="social-icon">
+                    <li class="followus-label">Follow Us:</li>
+                    <li><a href="https://www.facebook.com/Rohit42310031/" target="_blank"><i
+                                class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/RohitSi49998679" target="_blank"><i class="fa fa-twitter"
+                                aria-hidden="true"></i></a></li>
+
+                    <li><a href="https://www.linkedin.com/in/rohit-singh-a51252152/" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+                </div>
+                <div class="col-sm-5">
+                  <ul>
+                    <li><a routerLink="/routingNameA/performance">
+                        <!-- <i class="fa fa-volume-control-phone" aria-hidden="true" ></i>  -->
+                        performance </a></li>
+                    <li>|</li>
+                    <li><a routerLink="/routingNameA/attendance">
+                      <!-- <i class="fa fa-envelope-o" aria-hidden="true"></i> -->
+                            attendance</a></li>
+                    <li>|</li>
+                    <li><a routerLink="/routingNameA/students">
+                      <!-- <i class="fa fa-envelope-o" aria-hidden="true"></i> -->
+                        student</a></li>
+                <li>|</li>
+                    <li><a routerLink="/routingNameA/employee">
+                      <!-- <i class="fa fa-clock-o" aria-hidden="true"></i>  -->
+                      employee</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+
+<!---------------------------------------------------------- Main-Header Content  Start ---------------------------------------------------------------------------------------->
+
+<div style="padding-left:20px">
+  <a  routerLink="/routingNameA/head" class="logo"><img src="/assets/images/library_logo.jpeg" style="width:140px;padding: 0; height:90px" alt=""></a>
+  <h1>Responsive Header</h1>
+  <p>Resize the browser window to see the effect.</p>
+  <p>Some content..</p>
+</div>
+<!---------------------------------------------------------- Main-Header Content  End ---------------------------------------------------------------------------------------->
+
+
+<!---------------------------------------------------------- Log-Out Modal Start ---------------------------------------------------------------------------------------->
+<div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     
+        <button type="button" class="close text-right"  data-dismiss="modal" #close aria-label="Close">
+          <label class="float-left"> Logout?</label> 
+          <span aria-hidden="true">&times;</span>
+          </button> 
+       <form novalidate autocomplete="off">
+          <div class="modal-body logout-body">
+              <h2 class="text-center">Are you sure <br>you want to Logout?</h2>
+              <div class="button-div2 button-div23 text-center">
+                  <a (click)="logout()"  class="btn btn-back">YES</a>
+                  <a  class="anquer-lin-ch" ><button class="btn sugn-btn login-btn-responsive-ch4" type="button"  data-dismiss="modal" aria-label="Close">
+                    NO</button></a>
+              </div>
+          </div>
+       </form>
+    </div>
+</div>
+</div>
+<!---------------------------------------------------------- Log-Out Modal End ---------------------------------------------------------------------------------------->

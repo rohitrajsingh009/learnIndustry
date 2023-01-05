@@ -1,0 +1,31 @@
+
+<app-header2></app-header2>
+<!-- Contact form or earlier it was send-message-->
+<div class="contact-form">
+    <div class="container">
+     <form [formGroup]="reactiveForm" >
+      <div class="row">
+       <div class="col-lg-4 col-md-4 col-sm-12">
+         <h1>Get in Touch</h1> 
+       </div>
+       <div class="col-lg-8 col-md-8 col-sm-12 right">
+          <div class="form-group">
+            <input type="text" class="form-control form-control-lg"formControlName="name" placeholder="Your Name" name="">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control form-control-lg"formControlName="email" placeholder="YourEmail@email.com" name="email">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control form-control-lg" formControlName="description">
+             
+            </textarea>
+          </div>
+          <input type="submit" class="btn btn-secondary btn-block" (click)="send_query()" style="background-color:darkcyan"value="Send" name="">
+       </div>
+      </div>
+     </form>
+    </div>
+</div>
+<app-footer></app-footer>
+   
+   

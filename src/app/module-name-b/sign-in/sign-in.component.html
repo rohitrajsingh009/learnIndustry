@@ -1,0 +1,110 @@
+
+<app-header2></app-header2>
+<div class="container">
+    <form  [formGroup]="reactiveForm" #form="ngForm">
+        <h2 class="text-center">Sign in</h2>
+        <!-- <h2 class="text-center">Register</h2> -->
+        <!-- <div class="text-center social-btn" >
+            <button class="btn">fb facebook <i class="fa fa-facebook-square" aria-hidden="true"></i></button>
+            <button class="btn">google <i class="fa fa-google" aria-hidden="true"></i></button>    
+        </div>
+        <div class="or-seperator"><i>or</i></div> -->
+
+            <!-- <div class="form-group" >
+                <div class="input-group">                
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <span class="fa fa-user"></span>
+                        </span>                    
+                      </div>
+                      <input type="text" formControlName="user_name" class="form-control" name="username" placeholder="User Name" required="required">
+                  </div>
+              </div>
+              <div class="form-group"  >
+                <div class="input-group">                
+                      <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                          </span>                    
+                      </div>
+                      <input type="text" formControlName="user_contact" class="form-control" name="username" placeholder="Contact Number" required="required">
+                  </div>
+              </div> -->
+              <div class="form-group">
+                <div class="input-group">                
+                      <div class="input-group-prepend">
+                          <span class="input-group-text">
+                              <span class="fa fa-user"></span>
+                          </span>                    
+                      </div>
+                      <input type="text"  #email class="form-control"formControlName="email" placeholder="your-name@provider.com"    name="username" required minlength="1" maxlength="250">
+                      
+                    </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-group" >
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-lock"></i>
+                        </span>                    
+                    </div>
+                    <input type="password"  placeholder="Your Password XYZ"  #pass class="form-control" name="password" formControlName="password" required minlength="15" class="form-control form-control-sm" >
+                    
+                </div>
+            </div> 
+            <div class="form-group"   >
+                <button type="submit"   class="btn btn-success btn-block login-btn" (click)="callpostAPI(email.value,pass.value)">Sign in</button>
+                <!-- <button type="submit"  class="btn btn-success btn-block login-btn">Sign Up</button> -->
+            </div>
+            <!-- <div class="form-group"   >
+              <button type="submit"  class="btn btn-success btn-block login-btn" data-target="#pwdModal" data-toggle="modal">Forgot Password Send Email</button>
+         
+            </div> -->
+          <div class="clearfix"  >
+            <!-- <label class="float-left form-check-label"><input type="checkbox"> Remember me</label> -->
+            <a  class="float-right text-success" data-target="#pwdModal" data-toggle="modal" >Forgot Password?</a>
+        </div>
+
+    </form>
+    <div class="hint-text" >Don't have an account?
+        <a  class="text-success" (click)="server.navigateTo('sign-up')">Register Now!</a>
+    </div>
+</div>
+<app-footer></app-footer>
+
+<!--modal-->
+<div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h1 class="text-center" >What's My Password?</h1>
+        </div>
+        <div class="modal-body">
+            <div class="col-md-12">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <div class="text-center">
+                            
+                            <p>If you have forgotten your password,<br/> you can reset it here.</p>
+                              <div class="panel-body">
+                                  <fieldset>
+                                      <div class="form-group">
+                                          <input class="form-control input-lg" #email placeholder="E-mail Address" name="email" type="email">
+                                      </div>
+                                      <input class="btn btn-lg btn-primary btn-block" (click)="sendMail(email.value)" value="Send Password Reset Link" type="submit">
+                                  </fieldset>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <div class="col-md-12 text-right">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            </div>	
+        </div>
+    </div>
+    </div>
+  </div>

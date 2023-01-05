@@ -1,0 +1,86 @@
+{
+    "navitems": [
+      {
+        "linkText": "About",
+        "parentLink": "/about",
+        "menu": false,
+        "submenu": []
+      },
+      {
+        "linkText": "AngularJS SPA",
+        "parentLink": "/angularjs-spa",
+        "menu": false,
+        "submenu": []
+      },
+      {
+        "linkText": "Codepens",
+        "parentLink": "",
+        "menu": false,
+        "submenu": [
+          {
+            "childtext": "Link 1",
+            "link": "https://codepen.io/UX_Dev/live/5c88e99d0e9a03834dc2d113c24f9daa"
+          },
+          {
+            "childtext": "Link 2",
+            "link": "https://codepen.io/UX_Dev/pen/LmxqKa"
+          },
+          {
+            "childtext": "Link 3",
+            "link": "https://codepen.io/UX_Dev/pen/yzejjQ"
+          },
+          {
+            "childtext": "Link 4",
+            "link": "https://codepen.io/UX_Dev/pen/xoLQrY"
+          },
+          {
+            "childtext": "Link 5",
+            "link": "https://codepen.io/UX_Dev/pen/2788684ea795e215e9dff54bd5abc66b"
+          }
+        ]
+      },
+      {
+        "linkText": "Navigation",
+        "parentLink": "",
+        "menu": false,
+        "submenu": [
+          {
+            "childtext": "Pure CSS Menu",
+            "link": "https://codepen.io/UX_Dev/pen/VMwxmQ"
+          },
+          {
+            "childtext": "User Selection",
+            "link": "https://codepen.io/UX_Dev/live/ZXYLyV"
+          },
+          {
+            "childtext": "In Page Navigation",
+            "link": "https://codepen.io/UX_Dev/pen/JjogojN"
+          },
+          {
+            "childtext": "Progress Navigation Bar",
+            "link": "https://codepen.io/UX_Dev/pen/xXOapm"
+          }
+        ]
+      },
+      {
+        "linkText": "Angular 8",
+        "parentLink": "",
+        "menu": false,
+        "submenu": [
+          {
+            "childtext": "Nested Routing",
+            "link": "https://stackblitz.com/edit/angular-8-nested-routing"
+          },
+          {
+            "childtext": "Modular Routing",
+            "link": "https://stackblitz.com/edit/module-to-module-routing"
+          },
+          {
+            "childtext": "JSON Line Chart",
+            "link": "https://stackblitz.com/edit/line-chart-component-json"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,10 @@
+<p>reset works!</p>
+<h1>Reset Password</h1>
+
+<div>
+    <input type="text"#pass name="password">
+    <br/>
+    <input type="text" #cpass name="confirmPassword">
+    <br>
+    <input type="submit" (click)="save(pass.value,cpass.value)" value="Save password">
+</div>
