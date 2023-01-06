@@ -26,6 +26,10 @@ export class ConnectComponent implements OnInit {
         Validators.maxLength(250),
         emailValidator(),
       ]),
+      phone: new FormControl('', [
+        Validators.required,
+        Validators.minLength(15),
+      ]),
       description: new FormControl('', [
         Validators.required,
         Validators.minLength(15),
@@ -37,6 +41,7 @@ export class ConnectComponent implements OnInit {
     let data = {
       name:this.reactiveForm.value.name,
       email:this.reactiveForm.value.email,
+      phone:this.reactiveForm.value.phone,
       description:this.reactiveForm.value.description
   }
     this.server.postData(url,data).subscribe((res:any)=>{

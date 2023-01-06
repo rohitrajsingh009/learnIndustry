@@ -46,7 +46,7 @@ export class SignInComponent implements OnInit {
  callpostAPI(e:any,p:any){
   let data = {
     email:e?e:'rohitraj.smsit@gmail.com',
-    password:p?p:'Rohit@2025'
+    password:p?p:'Rohit@2027'
   }
   console.log(data)
   if(data.email ==='rohitraj.smsit@gmail.com'){
@@ -58,9 +58,13 @@ console.log('user',this.user)
   let url='/login'
   
   this.server.postData(url,data).subscribe((res:any)=>{
-    localStorage.setItem('token',res.token)
-   // localStorage.setItem('userType','admin')
- this.router.navigateByUrl('/routingNameA/profile')
+    if(res.status =='failed'){
+      alert(res.message)
+    }else{
+     localStorage.setItem('token',res.token)
+      // localStorage.setItem('userType','admin')
+    this.router.navigateByUrl('/routingNameA/profile')
+    }
   })
  }
  sendMail(v:any){

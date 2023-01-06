@@ -15,9 +15,11 @@ export class HeaderInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     var API_KEY = '123456';
+    console.log(request)
     const newHeaders = new HttpHeaders({
       "Content-Type":"application/json",
-      "setHeaders": API_KEY 
+      "setHeaders": API_KEY,
+      "authorization":`Bearer ${localStorage.getItem('token')}`
        }
        );
 //clone request and change header
