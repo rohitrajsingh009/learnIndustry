@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerService } from 'src/app/provider/server.service';
-
+import {TranslateService} from '@ngx-translate/core';
 @Component({
   selector: 'app-header2',
   templateUrl: './header.component.html',
@@ -10,12 +10,17 @@ export class HeaderComponent implements OnInit {
   currUrl:string ='';
   show: boolean =true;
   selected: string ='home';
-  constructor(public service:ServerService) {
+  constructor(public service:ServerService,public translate: TranslateService) {
    this.currUrl = JSON.stringify(window.location.href.split('/')[3])
     console.log(this.currUrl)
     if(this.currUrl.includes('services')){
       this.show= false
     }
+
+    translate.addLangs(['en', 'hi']);
+    translate.setDefaultLang('en');
+    var browserLang = translate.getBrowserLang();
+    // translate.use(browserLang.match(/en|hi/) ? browserLang : 'en');
    }
 
   ngOnInit(): void {

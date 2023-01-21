@@ -16,8 +16,5 @@ export class RoleGuard implements CanActivate {
       alert('you donot have admin rights')
       return false;
     }
-     
-
-  }
-  
+  }  
 }

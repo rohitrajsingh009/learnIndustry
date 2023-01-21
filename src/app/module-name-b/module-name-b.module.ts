@@ -16,6 +16,7 @@ import { ServicesComponent } from './services/services.component';
 import { UsersComponent } from './users/users.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ResetComponent } from './reset/reset.component';
+import { LanguageComponent } from './language/language.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ResetComponent } from './reset/reset.component';
     HeaderComponent,
     ServicesComponent,
     UsersComponent,
-    ResetComponent
+    ResetComponent,
+    LanguageComponent
   ],
   imports: [
     CommonModule,

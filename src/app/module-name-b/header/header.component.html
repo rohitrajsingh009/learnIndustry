@@ -52,10 +52,21 @@
                     <li class="nav-item" [ngClass]="selected == 'sign-in' ? 'active' : ''" (click)="goTo('sign-in')">
                         <a class="nav-link">Registration</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" [ngClass]="selected == 'contact-us' ? 'active' : ''"
-                            (click)="goTo('contact-us')">Contact Us</a>
+                            (click)="goTo('contact-us')">Contact Us
+                           
+                        </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                            >Change language</a>
+                           
+                    </li>
+                     <select #langSelect (change)="translate.use(langSelect.value)">
+                                <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                              </select>
                 </ul>
             </div>
         </nav>
