@@ -1,0 +1,32 @@
+{
+	"login": {
+		"title": "Formulaire De Connexion",
+		"username.label": "Nom d'utilisateur",
+		"username.placeholder": "Nom D'Utilisateur Ici",
+		"password.label": "Mot de passe",
+		"password.placeholder": "Entrez Le Mot De Passe",
+		"button.name": "Signin",
+		"forgotpassword.link": "Mot De Passe Oublié ?",
+		"register.link": "Créer Un Nouveau Compte",
+		"button.en": "Anglaise",
+		"button.ta": "Tamil",
+		"button.fr": "Française",
+		"button.zh": "Chinoise"
+	},
+    "header":{ 
+        "home":"Domicile",
+        "about_us":"À propos de nous",
+        "registration":"Inscription",
+        "contact_us":"Nous contacter",
+        "change_language":"Changer de langue"
+      },
+      "footer":{
+        "home":"Home",
+        "blog":"Blog",
+        "about":"About",
+        "contact":"Contact",
+        "address":" 163 E - BanshuGami Dream Villa, Marwatiya, Bansgaon,Gorakhpur - 273403",
+        "about_work":"About the Company",
+        "about_details":"We offer training and skill building courses across Technology, Design, Management, Science and Humanities."
+      }
+}

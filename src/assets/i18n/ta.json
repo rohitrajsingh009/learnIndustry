@@ -1,0 +1,32 @@
+{
+	"login": {
+		"title": "உள்நுழைவு வடிவம்",
+		"username.label": "பயனர் பெயர்",
+		"username.placeholder": "இங்கே பயனர்பெயர்",
+		"password.label": "கடவுச்சொல்",
+		"password.placeholder": "கடவுச்சொல்லை உள்ளிடவும்",
+		"button.name": "உள்நுழைவு",
+		"forgotpassword.link": "கடவுச்சொல் மறந்து விட்டீர்களா ?",
+		"register.link": "புதிய கணக்கை உருவாக்க",
+		"button.en": "ஆங்கிலம்",
+		"button.ta": "தமிழ்",
+		"button.fr": "பிரஞ்சு",
+		"button.zh": "சீன"
+	},
+    "header":{ 
+        "home":"வீடு",
+        "about_us":"எங்களை பற்றி",
+        "registration":"பதிவு",
+        "contact_us":"எங்களை தொடர்பு கொள்ள",
+        "change_language":"மொழியை மாற்றவும்"
+      },
+      "footer":{
+        "home":"Home",
+        "blog":"Blog",
+        "about":"About",
+        "contact":"Contact",
+        "address":" 163 E - BanshuGami Dream Villa, Marwatiya, Bansgaon,Gorakhpur - 273403",
+        "about_work":"About the Company",
+        "about_details":"We offer training and skill building courses across Technology, Design, Management, Science and Humanities."
+      }
+}

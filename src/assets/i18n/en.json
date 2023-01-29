@@ -1,6 +1,37 @@
 {
-  "demo": {
-      "title": "Translation demo",
-      "text": "This is a simple demonstration app for ngx-translate"
+	"login": {
+		"title": "Login Form",
+		"username.label": "Username",
+		"username.placeholder": "Username Here",
+		"password.label": "Password",
+		"password.placeholder": "Enter Password",
+		"button.name": "Signin",
+		"forgotpassword.link": "Forgot Password ?",
+		"register.link": "Create New Account",
+		"button.en": "English",
+		"button.ta": "Tamil",
+		"button.fr": "French",
+		"button.zh": "Chinese"
+	},
+  "header":{ 
+    "home":"Home",
+    "about_us":"About Us",
+    "registration":"Registration",
+    "contact_us":"Contact Us",
+    "change_language":"Change Language",
+    "lang.en":"English",
+    "lang.ta":"Tamil",
+    "lang.fr":"French",
+    "lang.hi":"Hindi",
+    "lang.zh":"Chinese"
+  },
+  "footer":{
+    "home":"Home",
+    "blog":"Blog",
+    "about":"About",
+    "contact":"Contact",
+    "address":" 163 E - BanshuGami Dream Villa, Marwatiya, Bansgaon,Gorakhpur - 273403",
+    "about_work":"About the Company",
+    "about_details":"We offer training and skill building courses across Technology, Design, Management, Science and Humanities."
   }
 }

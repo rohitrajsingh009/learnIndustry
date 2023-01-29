@@ -17,6 +17,9 @@ import { UsersComponent } from './users/users.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ResetComponent } from './reset/reset.component';
 import { LanguageComponent } from './language/language.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 @NgModule({
@@ -40,6 +43,17 @@ import { LanguageComponent } from './language/language.component';
     CommonModule,
     ModuleNameBRoutingModule,
     ReactiveFormsModule,
+    TranslateModule.forRoot({
+      defaultLanguage:'en',
+        loader: {
+          provide: TranslateLoader,
+          useFactory:  (createTranslateLoader),//HttpLoaderFactory,//
+          deps: [HttpClient]
+      }
+    })
   ]
 })
 export class ModuleNameBModule { }
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}

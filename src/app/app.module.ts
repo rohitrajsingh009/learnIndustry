@@ -8,15 +8,8 @@ import { AuthInterceptor } from './shared/auth.interceptor';
 import { HeaderInterceptor } from './shared/header.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EmailValidatorDirective } from './shared/email-validator.directive';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, } from '@angular/common/http';
 
-// Factory function required during AOT compilation
-// required for AOT compilation
-export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-    return new TranslateHttpLoader(http);
-}
+
 
 
 @NgModule({
@@ -34,13 +27,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
         AppRoutingModule,
         HttpClientModule,
         ReactiveFormsModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        })
+      
     ]
 })
 export class AppModule { }

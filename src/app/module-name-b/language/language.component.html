@@ -1,16 +1,38 @@
-<div>
-    <h1>Translation demo</h1>
-    <p>This is a simple demonstration app for ngx-translate</p>
-</div>
-<div>
-    <h1>{{ 'demo.title' | translate }}</h1>
-
-    <!-- translation: translation pipe -->
-    <p>{{ 'demo.text' | translate }}</p>
-
-    <!-- translation: directive (key as attribute)-->
-    <p [translate]="'demo.text'"></p>
-
-    <!-- translation: directive (key as content of element) -->
-    <p translate>demo.text</p>
-</div>
+<header class="jumbotron" style="padding: 2%; border-radius: 0;">
+    <h2 class="text-center"> {{'login.title' | translate }} </h2>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6"></div>
+      <div class="col-lg-4 col-md-6">
+        <div class="form-group">
+          <label> {{ 'login.username.label' | translate }} </label>
+          <input type="text" name="userName" placeholder="{{ 'login.username.placeholder' | translate }}" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <label> {{ 'login.password.label' | translate }} </label>
+          <input type="password" name="passWord" placeholder="{{ 'login.password.placeholder' | translate }}" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <button class="btn btn-success"> {{'login.button.name' | translate }} </button>
+        </div>
+  
+        <div class="form-group">
+          <label> <a href="#" class="" style="float: left;"> {{'login.register.link' | translate}} </a> </label>
+          <br />
+          <label> <a href="#" class="" style="float: right;"> {{'login.forgotpassword.link' | translate}} </a> </label>
+          <br />
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" (click)="useLanguage('ta')">  {{'login.button.ta' | translate}}  </button>
+            <button type="button" class="btn btn-primary" (click)="useLanguage('fr')">  {{'login.button.fr' | translate}}  </button>
+            <button type="button" class="btn btn-primary" (click)="useLanguage('zh')">  {{'login.button.zh' | translate}}  </button>
+            <button type="button" class="btn btn-primary" (click)="useLanguage('en')"> {{'login.button.en' | translate}} </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6"></div>
+    </div>
+  </div>
+  

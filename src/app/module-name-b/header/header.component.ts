@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
       this.show= false
     }
 
-    translate.addLangs(['en', 'hi']);
+    translate.addLangs(['en','fr','ta','zh', 'hi']);
     translate.setDefaultLang('en');
     var browserLang = translate.getBrowserLang();
     // translate.use(browserLang.match(/en|hi/) ? browserLang : 'en');
@@ -25,7 +25,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  setLanguage(v:any){
+    console.log(v)
+  this.translate.use(v)
+}
   
 goTo(v:any){
   if(v==''){

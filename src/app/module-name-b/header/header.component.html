@@ -17,11 +17,11 @@
                 <hr>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item " [ngClass]="selected == 'routeNameB' ? 'active' : ''" (click)="goTo('')">
-                        <a class="nav-link">Home</a>
+                        <a class="nav-link">{{'header.home'   | translate }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" [ngClass]="selected == 'about-us' ? 'active' : ''"
-                            (click)="goTo('about-us')">About Us</a>
+                            (click)="goTo('about-us')">{{'header.about_us'  | translate }}</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" [ngClass]="selected == 'entry-types' ? 'active' : ''"
@@ -50,22 +50,22 @@
 
 
                     <li class="nav-item" [ngClass]="selected == 'sign-in' ? 'active' : ''" (click)="goTo('sign-in')">
-                        <a class="nav-link">Registration</a>
+                        <a class="nav-link">{{ 'header.registration'   | translate }}</a>
                     </li>
                     
                     <li class="nav-item">
                         <a class="nav-link" [ngClass]="selected == 'contact-us' ? 'active' : ''"
-                            (click)="goTo('contact-us')">Contact Us
+                            (click)="goTo('contact-us')"> {{'header.contact_us'  | translate }}
                            
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" 
-                            >Change language</a>
+                            >{{'header.change_language'  | translate }}</a>
                            
                     </li>
-                     <select #langSelect (change)="translate.use(langSelect.value)">
-                                <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                     <select #langSelect (change)="setLanguage(langSelect.value)">
+                                <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang | translate  }}</option>
                               </select>
                 </ul>
             </div>
